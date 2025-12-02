@@ -1,0 +1,118 @@
+<header id="header" class="absolute top-0 z-50 h-20 w-full">
+  <div
+    class="mx-auto flex h-full max-w-5xl items-center justify-between border-r-0 border-b border-l-0 border-transparent pr-4 pl-6 select-none lg:rounded-b-xl lg:border-r lg:border-l"
+  >
+    <a
+      href="/"
+      class="group relative z-30 flex h-5 items-center space-x-1.5 text-base font-semibold text-black dark:text-white"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#fff"
+        ><path
+          d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"
+        ></path></svg
+      >
+      <span class="whitespace-nowrap">Pablo Medina</span>
+    </a>
+    <div
+      id="mobileMenuBackground"
+      onclick="closeMobileMenu()"
+      class="fixed inset-0 z-20 hidden h-screen w-screen bg-white/90 duration-300 ease-out dark:bg-neutral-950/90"
+    >
+    </div>
+    <nav
+      class="relative z-30 flex w-full flex-row-reverse items-center justify-start text-sm text-neutral-500 sm:flex-row sm:justify-end dark:text-neutral-400"
+    >
+      <div
+        id="openMenu"
+        class="ml-4 flex h-6 w-6 cursor-pointer flex-col items-end justify-center sm:hidden"
+      >
+      </div>
+      <div
+        id="closeMenu"
+        class="ml-4 flex h-6 w-6 -translate-x-1 cursor-pointer flex-col items-end justify-center sm:hidden"
+      >
+      </div>
+      <div
+        id="menu"
+        class="dm:mx-0 fixed top-[75px] left-0 z-40 hidden h-auto w-full flex-col items-end justify-start pt-7 pb-4 text-sm duration-300 ease-out sm:relative sm:top-0 sm:flex sm:h-auto sm:w-auto sm:flex-row sm:py-0 sm:pt-0 sm:pr-0 sm:text-sm"
+      >
+        <div
+          class="absolute inset-0 top-0 right-0 block h-full w-full px-3 sm:hidden"
+        >
+          <div
+            class="relative h-full w-full rounded-xl border border-dashed border-neutral-300 bg-white backdrop-blur-sm dark:border-neutral-700 dark:bg-neutral-950"
+          >
+          </div>
+        </div>
+        <a
+          href="/"
+          class="relative flex w-full items-center justify-center px-3 py-2 text-center font-medium tracking-wide text-neutral-900 duration-200 ease-out hover:text-neutral-900 sm:mb-0 sm:py-0 md:w-auto dark:text-white dark:hover:text-white"
+        >
+          Inicio
+        </a>
+        <a
+          href="/about"
+          class="relative flex w-full items-center justify-center px-3 py-2 text-center font-medium tracking-wide duration-200 ease-out hover:text-neutral-900 sm:mb-0 sm:py-0 md:w-auto dark:hover:text-white"
+        >
+          Sobre mi
+        </a>
+        <a
+          href="mailto:alberto@albrivas.com"
+          class="relative mx-auto mt-2 flex w-fit items-center justify-center rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-blue-700 sm:hidden"
+        >
+          Contacto
+        </a>
+      </div>
+      <div
+        id="darkToggle"
+        class="group relative ml-4 flex cursor-pointer items-center pl-6 font-medium tracking-wide text-neutral-800 dark:text-white"
+      >
+        <div
+          class="horizon absolute left-0 flex h-6 w-6 items-center justify-center overflow-hidden border-b border-transparent group-hover:border-neutral-600"
+        >
+          <svg
+            class="ease setting absolute hidden h-6 w-6 transform transition duration-700 dark:hidden"
+            id="sun"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            ><path
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path></svg
+          >
+          <svg
+            class="ease rising absolute h-6 w-6 transform transition duration-700 dark:block"
+            id="moon"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            ><path
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path></svg
+          >
+        </div>
+        <span class="hidden sm:inline-block">
+          <span id="dayText" class="ml-2 hidden dark:hidden"></span>
+          <span id="nightText" class="ml-2 dark:inline"></span>
+        </span>
+      </div>
+      <a
+        href="mailto:pabmedinarod@gmail.com"
+        class="ml-4 hidden items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-blue-700 sm:flex dark:bg-blue-500 dark:hover:bg-blue-600"
+      >
+        Contacto
+      </a>
+    </nav>
+  </div>
+</header>

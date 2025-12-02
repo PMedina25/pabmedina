@@ -1,11 +1,58 @@
 ---
-import Welcome from "../components/Welcome.astro";
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import heroBg from "../assets/images/hero-section-bg.png";
 ---
 
 <Layout>
-  <Welcome />
+  <div
+    class="pointer-events-none fixed top-0 right-0 left-0"
+    style="height: 100vh; z-index: 0;"
+  >
+    <Image
+      class="h-full w-full object-cover opacity-45 dark:opacity-45"
+      src={heroBg}
+      alt=""
+    />
+    <div
+      class="absolute inset-0 bg-linear-to-b from-white/70 via-white/85 to-white dark:from-neutral-950/40 dark:via-neutral-950/60 dark:to-neutral-950"
+    >
+    </div>
+  </div>
+  <section
+    class="relative flex items-center justify-center overflow-hidden"
+    style="z-index: 10; min-height: calc(100vh - 80px);"
+  >
+    <div class="relative container mx-auto px-6 py-20">
+      <div class="mx-auto max-w-4xl space-y-8 text-center">
+        <div
+          class="animate-in fade-in slide-in-from-bottom-4 inline-block duration-1000"
+        >
+          <span
+            class="rounded-full border border-blue-200 bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:border-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
+          >
+            Desarrollador Software
+          </span>
+        </div>
+
+        <h1
+          class="animate-in fade-in slide-in-from-bottom-4 text-4xl font-bold tracking-tight text-white delay-100 duration-1000 md:text-7xl"
+        >
+          Desarrollo web
+          <span
+            class="mt-2 block bg-linear-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text pb-2 text-transparent"
+          >
+            full stack
+          </span>
+        </h1>
+
+        <h2
+          class="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-2xl text-xl leading-relaxed font-normal text-neutral-600 delay-200 duration-1000 md:text-2xl dark:text-neutral-300"
+        >
+          Desarrollador de software especializado en aplicaciones web,
+          transformando ideas en productos digitales de alto impacto
+        </h2>
+      </div>
+    </div>
+  </section>
 </Layout>
