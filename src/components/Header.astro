@@ -28,7 +28,6 @@ import ThemeToggleButton from "./ThemeToggleButton.astro";
     </a>
     <div
       id="mobileMenuBackground"
-      onclick="closeMobileMenu()"
       class="fixed inset-0 z-20 hidden h-screen w-screen bg-white/90 duration-300 ease-out dark:bg-neutral-950/90"
     >
     </div>
@@ -39,11 +38,29 @@ import ThemeToggleButton from "./ThemeToggleButton.astro";
         id="openMenu"
         class="ml-4 flex h-6 w-6 cursor-pointer flex-col items-end justify-center sm:hidden"
       >
+        <svg
+          class="h-8 w-8 dark:text-neutral-200"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"><path d="M4 8h16M4 16h16"></path></svg
+        >
       </div>
       <div
         id="closeMenu"
-        class="ml-4 flex h-6 w-6 -translate-x-1 cursor-pointer flex-col items-end justify-center sm:hidden"
+        class="ml-4 hidden h-6 w-6 -translate-x-1 cursor-pointer flex-col items-end justify-center sm:hidden"
       >
+        <svg
+          class="h-6 w-6 text-neutral-600 dark:text-neutral-200"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"><path d="M6 18L18 6M6 6l12 12"></path></svg
+        >
       </div>
       <div
         id="menu"
@@ -88,3 +105,19 @@ import ThemeToggleButton from "./ThemeToggleButton.astro";
     </nav>
   </div>
 </header>
+
+<script is:inline>
+  document.getElementById("openMenu").addEventListener("click", () => {
+    document.getElementById("menu").classList.remove("hidden");
+    document.getElementById("closeMenu").classList.remove("hidden");
+    document.getElementById("openMenu").classList.add("hidden");
+    document.getElementById("mobileMenuBackground").classList.remove("hidden");
+  });
+
+  document.getElementById("closeMenu").addEventListener("click", () => {
+    document.getElementById("menu").classList.add("hidden");
+    document.getElementById("closeMenu").classList.add("hidden");
+    document.getElementById("openMenu").classList.remove("hidden");
+    document.getElementById("mobileMenuBackground").classList.add("hidden");
+  });
+</script>
