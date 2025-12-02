@@ -31,9 +31,10 @@ import ThemeToggleButton from "./ThemeToggleButton.astro";
     <nav
       class="relative z-30 flex w-full flex-row-reverse items-center justify-start text-sm text-neutral-500 sm:flex-row sm:justify-end dark:text-neutral-400"
     >
-      <div
+      <button
         id="openMenu"
         class="ml-4 flex h-6 w-6 cursor-pointer flex-col items-end justify-center sm:hidden"
+        aria-label="Open menu"
       >
         <svg
           class="h-8 w-8 dark:text-neutral-200"
@@ -44,10 +45,11 @@ import ThemeToggleButton from "./ThemeToggleButton.astro";
           viewBox="0 0 24 24"
           stroke="currentColor"><path d="M4 8h16M4 16h16"></path></svg
         >
-      </div>
+      </button>
       <div
         id="closeMenu"
         class="ml-4 hidden h-6 w-6 -translate-x-1 cursor-pointer flex-col items-end justify-center sm:hidden"
+        aria-label="Close menu"
       >
         <svg
           class="h-6 w-6 text-neutral-600 dark:text-neutral-200"
@@ -85,7 +87,7 @@ import ThemeToggleButton from "./ThemeToggleButton.astro";
         </a>
         <a
           href="mailto:alberto@albrivas.com"
-          class="relative mx-auto mt-2 flex w-fit items-center justify-center rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-blue-700 sm:hidden"
+          class="relative mx-auto mt-2 flex w-fit items-center justify-center rounded-full bg-linear-to-br from-purple-600 to-blue-500 px-5 py-2 text-center text-sm leading-5 font-medium text-white transition-colors duration-200 hover:bg-blue-700 hover:bg-linear-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none sm:hidden dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800"
         >
           Contacto
         </a>
@@ -95,7 +97,7 @@ import ThemeToggleButton from "./ThemeToggleButton.astro";
 
       <a
         href="mailto:pabmedinarod@gmail.com"
-        class="ml-4 hidden items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-blue-700 sm:flex dark:bg-blue-500 dark:hover:bg-blue-600"
+        class="ml-4 hidden items-center justify-center rounded-full bg-linear-to-br from-purple-600 to-blue-500 px-5 py-2 text-center text-sm leading-5 font-medium text-white transition-colors duration-200 hover:bg-blue-700 hover:bg-linear-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none sm:flex dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800"
       >
         Contacto
       </a>
