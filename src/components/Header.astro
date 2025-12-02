@@ -1,3 +1,7 @@
+---
+import ThemeToggleButton from "./ThemeToggleButton.astro";
+---
+
 <header id="header" class="absolute top-0 z-50 h-20 w-full">
   <div
     class="mx-auto flex h-full max-w-5xl items-center justify-between border-r-0 border-b border-l-0 border-transparent pr-4 pl-6 select-none lg:rounded-b-xl lg:border-r lg:border-l"
@@ -8,14 +12,18 @@
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        height="24px"
-        viewBox="0 -960 960 960"
-        width="24px"
-        fill="#fff"
-        ><path
-          d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"
-        ></path></svg
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-4 w-4"
       >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+        ></path>
+      </svg>
       <span class="whitespace-nowrap">Pablo Medina</span>
     </a>
     <div
@@ -68,45 +76,9 @@
           Contacto
         </a>
       </div>
-      <div
-        id="darkToggle"
-        class="group relative ml-4 flex cursor-pointer items-center pl-6 font-medium tracking-wide text-neutral-800 dark:text-white"
-      >
-        <div
-          class="horizon absolute left-0 flex h-6 w-6 items-center justify-center overflow-hidden border-b border-transparent group-hover:border-neutral-600"
-        >
-          <svg
-            class="ease setting absolute hidden h-6 w-6 transform transition duration-700 dark:hidden"
-            id="sun"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            ><path
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-            ></path></svg
-          >
-          <svg
-            class="ease rising absolute h-6 w-6 transform transition duration-700 dark:block"
-            id="moon"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            ><path
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-            ></path></svg
-          >
-        </div>
-        <span class="hidden sm:inline-block">
-          <span id="dayText" class="ml-2 hidden dark:hidden"></span>
-          <span id="nightText" class="ml-2 dark:inline"></span>
-        </span>
-      </div>
+
+      <ThemeToggleButton />
+
       <a
         href="mailto:pabmedinarod@gmail.com"
         class="ml-4 hidden items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-blue-700 sm:flex dark:bg-blue-500 dark:hover:bg-blue-600"
