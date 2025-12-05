@@ -17,13 +17,51 @@ import "../styles/global.css";
     <title>Pablo Medina - Software Developer</title>
     <meta
       name="description"
-      content="Ingeniero de software especializado en desarrollo web, transformando ideas en productos digitales de alto impacto"
+      content="Desarrollador de software especializado en aplicaciones web, transformando ideas en productos digitales de alto impacto"
     />
     <meta
       name="keywords"
       content="desarrollador software, software developer, ingeniero software, desarrollador frontend, frontend developer, desarrollo software, software development, desarrollo web, web development, programador web, programador frontend, angular, react, astro, javascript, typescript, html, css, portfolio web"
     />
     <meta name="author" content="Pablo Medina" />
+    <link rel="canonical" href="https://pabmedina.dev/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pablo Medina" />
+    <meta
+      property="og:title"
+      content="Pablo Medina — Desarrollador de Software"
+    />
+    <meta
+      property="og:description"
+      content="Desarrollador de software especializado en aplicaciones web, transformando ideas en productos digitales de alto impacto"
+    />
+    <meta property="og:url" content="https://pabmedina.dev/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta
+      property="og:image"
+      content="https://pabmedina.dev/og-home-large.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@pabmedina" />
+    <!-- usar handle real si existe -->
+    <meta
+      name="twitter:title"
+      content="Pablo Medina — Desarrollador de Software"
+    />
+    <meta
+      name="twitter:description"
+      content="Desarrollador de software especializado en aplicaciones web, transformando ideas en productos digitales de alto impacto"
+    />
+    <meta
+      name="twitter:image"
+      content="https://pabmedina.dev/og-home-large.png"
+    />
   </head>
   <body
     class="flex min-h-screen flex-col bg-white antialiased dark:bg-neutral-950"
@@ -543,6 +581,21 @@ import "../styles/global.css";
 
     <SpeedInsights />
     <Analytics />
+
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pablo Medina",
+        "url": "https://pabmedina.dev/",
+        "sameAs": [
+          "https://github.com/PMedina25",
+          "https://www.linkedin.com/in/pablo-medina-rodríguez-a3a8b9135"
+        ],
+        "jobTitle": "Software Developer",
+        "description": "Desarrollador de software especializado en aplicaciones web, transformando ideas en productos digitales de alto impacto."
+      }
+    </script>
   </body>
 </html>
 
