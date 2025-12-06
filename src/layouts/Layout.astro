@@ -4,6 +4,10 @@ import Footer from "@components/Footer.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
 import "../styles/global.css";
+
+const { title = "Pablo Medina - Software Developer" } = Astro.props;
+
+const url = new URL(Astro.url);
 ---
 
 <!doctype html>
@@ -14,7 +18,7 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
-    <title>Pablo Medina - Software Developer</title>
+    <title>{title}</title>
     <meta
       name="description"
       content="Desarrollador de software especializado en aplicaciones web, transformando ideas en productos digitales de alto impacto"
@@ -24,20 +28,17 @@ import "../styles/global.css";
       content="desarrollador software, software developer, ingeniero software, desarrollador frontend, frontend developer, desarrollo software, software development, desarrollo web, web development, programador web, programador frontend, angular, react, astro, javascript, typescript, html, css, portfolio web"
     />
     <meta name="author" content="Pablo Medina" />
-    <link rel="canonical" href="https://pabmedina.dev/" />
+    <link rel="canonical" href={url} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Pablo Medina" />
-    <meta
-      property="og:title"
-      content="Pablo Medina — Desarrollador de Software"
-    />
+    <meta property="og:title" content={title} />
     <meta
       property="og:description"
       content="Desarrollador de software especializado en aplicaciones web, transformando ideas en productos digitales de alto impacto"
     />
-    <meta property="og:url" content="https://pabmedina.dev/" />
+    <meta property="og:url" content={url} />
     <meta property="og:locale" content="es_ES" />
     <meta
       property="og:image"
